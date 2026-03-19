@@ -64,7 +64,7 @@ export default function VerdantPage() {
   const heroRef = useRef<HTMLDivElement>(null)
   const observerRef = useRef<IntersectionObserver | null>(null)
 
-  const dynamicWords = ["леса", "природу", "животных", "экосистемы", "биоразнообразие", "дикую жизнь", "среду обитания"]
+  const dynamicWords = ["леса", "природу", "планету", "экосистемы", "биоразнообразие", "будущее", "дикую природу"]
 
   useEffect(() => {
     const wordInterval = setInterval(() => {
@@ -159,7 +159,7 @@ export default function VerdantPage() {
               onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
               className="text-lg md:text-xl font-semibold font-mono hover:text-pink-400 transition-colors duration-300"
             >
-              VERDANT
+              ЭКОСФЕРА
             </button>
 
             <nav className="hidden md:flex items-center gap-8">
@@ -278,21 +278,21 @@ export default function VerdantPage() {
                   wordFade ? "opacity-100 blur-0" : "opacity-0 blur-lg"
                 }`}
               >
-                Защитим <AnimatedText key={dynamicWordIndex} text={dynamicWords[dynamicWordIndex]} delay={0} />
+                Сохраним <AnimatedText key={dynamicWordIndex} text={dynamicWords[dynamicWordIndex]} delay={0} />
               </span>
               <span className="block stagger-reveal text-7xl font-light md:text-8xl" style={{ animationDelay: "90ms" }}>
-                в масштабе
+                вместе
               </span>
             </h1>
             <p
               className="text-[#A7ABB3] text-base md:text-lg max-w-[520px] mx-auto mb-8 leading-relaxed stagger-reveal text-white"
               style={{ animationDelay: "180ms" }}
             >
-              Мониторинг лесов в реальном времени с помощью ИИ. Обнаружение угроз, отслеживание биоразнообразия, сохранение природы для будущих поколений.
+              Глобальная платформа для защиты природных экосистем. ИИ-мониторинг в реальном времени, раннее обнаружение угроз и сохранение биоразнообразия — всё это ЭКОСФЕРА.
             </p>
             <div className="stagger-reveal" style={{ animationDelay: "270ms" }}>
               <Button className="glass-button px-8 py-6 text-base rounded-full bg-white/5 border border-white/10 hover:bg-white/10 hover:border-white/20 transition-all duration-300 text-white">
-                Начать защиту
+                Присоединиться к миссии
               </Button>
             </div>
           </div>
@@ -321,7 +321,7 @@ export default function VerdantPage() {
       <section className="relative py-12 border-y border-white/5 bg-[#0B0C0F] overflow-hidden md:py-8 md:pt-8 md:pb-4">
         <div className="w-full">
           <p className="text-center text-xs md:text-sm uppercase tracking-[0.2em] text-[#A7ABB3] mb-8">
-            Нам доверяют ведущие природоохранные организации
+            Нас поддерживают ведущие экологические фонды и организации
           </p>
           <div className="logo-marquee">
             <div className="logo-marquee-content">
@@ -359,7 +359,7 @@ export default function VerdantPage() {
       <section id="metrics" className="relative py-20 md:py-32 px-4 animate-on-scroll md:pt-24 md:pb-20">
         <div className="max-w-[1120px] w-full mx-auto">
           <h2 className="font-serif text-[32px] leading-[1.15] md:text-[48px] md:leading-[1.1] font-medium mb-6 md:mb-8 text-center text-balance">
-            Природоохранный{" "}
+            Реальный{" "}
             <span
               className="inline-block"
               style={{
@@ -369,21 +369,21 @@ export default function VerdantPage() {
                 backgroundClip: "text",
               }}
             >
-              результат
+              вклад
             </span>{" "}
-            в масштабе
+            в сохранение природы
           </h2>
 
           <p className="text-[#A7ABB3] text-sm md:text-base mb-12 md:mb-16 text-center max-w-[600px] mx-auto leading-relaxed">
-            Нам доверяют природоохранные организации по всему миру. Работаем на технологиях, созданных для природы.
+            Каждый год мы защищаем миллионы гектаров леса, помогаем тысячам видов и предотвращаем экологические катастрофы.
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 max-w-[800px] mx-auto">
             {[
-              { label: "ЗАЩИЩЕНО ЛЕСОВ", value: "2.4M", desc: "гектаров по всему миру", color: "pink" },
-              { label: "ВИДОВ НА МОНИТОРИНГЕ", value: "12K+", desc: "диких животных", color: "purple" },
-              { label: "ПОГЛОЩЕНО УГЛЕРОДА", value: "18M", desc: "тонн CO2", color: "pink" },
-              { label: "ТОЧНОСТЬ ДЕТЕКЦИИ", value: "99.4%", desc: "обнаружения угроз", color: "purple" },
+              { label: "ЗАЩИЩЕНО ЛЕСОВ", value: "3.1M", desc: "гектаров по всему миру", color: "pink" },
+              { label: "ВИДОВ ПОД ЗАЩИТОЙ", value: "14K+", desc: "редких и исчезающих", color: "purple" },
+              { label: "ПОГЛОЩЕНО УГЛЕРОДА", value: "22M", desc: "тонн CO2 в год", color: "pink" },
+              { label: "ТОЧНОСТЬ МОНИТОРИНГА", value: "99.7%", desc: "обнаружения угроз", color: "purple" },
             ].map((metric, i) => (
               <div
                 key={i}
@@ -414,10 +414,10 @@ export default function VerdantPage() {
             ГЛОБАЛЬНЫЙ ОХВАТ
           </div>
           <h2 className="font-serif text-[32px] leading-[1.15] md:text-[48px] md:leading-[1.1] font-medium mb-6 text-balance">
-            Проекты по всему миру
+            Наши проекты на карте мира
           </h2>
           <p className="text-[#A7ABB3] text-sm md:text-base max-w-[600px] mx-auto leading-relaxed">
-            Мониторинг и защита критически важных лесных экосистем на пяти континентах
+            Активные зоны защиты на пяти континентах — от тропиков Амазонии до сибирской тайги
           </p>
         </div>
 
@@ -437,7 +437,7 @@ export default function VerdantPage() {
                 ТЕХНОЛОГИИ СОХРАНЕНИЯ
               </div>
               <h2 className="font-serif text-[36px] leading-[1.15] md:text-[56px] md:leading-[1.1] font-medium mb-8 text-balance">
-                Каждая экосистема{" "}
+                Технологии на службе{" "}
                 <span
                   className="inline-block"
                   style={{
@@ -447,11 +447,11 @@ export default function VerdantPage() {
                     backgroundClip: "text",
                   }}
                 >
-                  важна
+                  природы
                 </span>
               </h2>
               <p className="text-[#A7ABB3] text-base md:text-lg leading-relaxed mb-12">
-                Наши спутниковые и ИИ-технологии отслеживают биоразнообразие, выявляют незаконные вырубки, анализируют паттерны обезлесения и оповещают команды в реальном времени. Сохранение со скоростью, которую требует природа.
+                Платформа ЭКОСФЕРА объединяет спутниковое наблюдение, дроны и ИИ-алгоритмы в единую систему. Мы выявляем угрозы за 24 часа, отслеживаем популяции редких видов и даём командам данные для принятия решений в реальном времени.
               </p>
 
               <div className="md:hidden mb-8">
@@ -477,25 +477,25 @@ export default function VerdantPage() {
                 {[
                   {
                     title: "Дроны-разведчики",
-                    desc: "Аэросъемка для учета дикой природы и видового разнообразия",
+                    desc: "Аэросъемка труднодоступных территорий и учёт дикой природы с воздуха",
                     icon: CustomDroneIcon,
                     image: "/drone.png",
                   },
                   {
-                    title: "Мониторинг 24/7",
-                    desc: "Круглосуточное спутниковое наблюдение с мгновенными оповещениями",
+                    title: "Спутниковый мониторинг 24/7",
+                    desc: "Круглосуточное наблюдение из космоса с мгновенными алертами о любых изменениях",
                     icon: Satellite,
                     image: "/real-time-satellite.png",
                   },
                   {
-                    title: "Учет биоразнообразия",
-                    desc: "Картирование и мониторинг популяций животных по регионам",
+                    title: "Атлас биоразнообразия",
+                    desc: "Живая карта популяций редких видов и состояния экосистем в каждом регионе",
                     icon: PawPrint,
                     image: "/biodiversity-tracking.png",
                   },
                   {
                     title: "Защита от вырубки",
-                    desc: "Обнаружение угроз до их эскалации",
+                    desc: "ИИ обнаруживает незаконные вырубки до их эскалации — в течение 24 часов",
                     icon: Trees,
                     image: "/deforestation-detect.png",
                   },
@@ -603,41 +603,41 @@ export default function VerdantPage() {
               ?
             </h2>
             <p className="text-[#A7ABB3] text-sm md:text-base max-w-[600px] mx-auto leading-relaxed">
-              Все, что нужно знать о VERDANT и нашей платформе для экологического мониторинга.
+              Всё, что нужно знать о платформе ЭКОСФЕРА и о том, как вы можете помочь природе.
             </p>
           </div>
 
           <div className="space-y-4">
             {[
               {
-                question: "Как работает спутниковый мониторинг VERDANT?",
+                question: "Как работает платформа ЭКОСФЕРА?",
                 answer:
-                  "Наша платформа использует сеть спутников в сочетании с ИИ-алгоритмами для анализа лесного покрова в реальном времени. Мы обнаруживаем изменения площадью от 0,5 гектара в течение 24 часов, что позволяет оперативно реагировать на угрозы: незаконные вырубки или лесные пожары.",
+                  "Мы объединяем данные со спутников, дронов и полевых датчиков в единую ИИ-платформу. Алгоритмы анализируют изменения лесного покрова в реальном времени и выявляют угрозы — незаконные вырубки, пожары, браконьерство — в течение 24 часов после их возникновения.",
               },
               {
-                question: "Какие регионы охватывает VERDANT?",
+                question: "Какие регионы охвачены мониторингом?",
                 answer:
-                  "VERDANT сейчас ведет мониторинг более 2,4 миллиона гектаров на пяти континентах: тропические леса Амазонии, бассейн Конго, леса Борнео, сибирская тайга и тихоокеанский северо-запад Америки. Мы постоянно расширяем охват для защиты новых экосистем.",
+                  "ЭКОСФЕРА сейчас ведёт мониторинг более 3,1 миллиона гектаров на пяти континентах: тропические леса Амазонии, бассейн Конго, леса Борнео, сибирская тайга и тихоокеанский северо-запад Северной Америки. Мы планомерно расширяем охват каждый год.",
               },
               {
                 question: "Насколько точна система обнаружения угроз?",
                 answer:
-                  "Наша система обнаружения угроз на базе ИИ достигает точности 99,4%. Мы используем модели машинного обучения, обученные на миллионах спутниковых снимков, чтобы отличать естественные изменения от антропогенного обезлесения или незаконной деятельности.",
+                  "Наш ИИ достигает точности 99,7%. Модели машинного обучения обучены на десятках миллионов спутниковых снимков и безошибочно отличают естественные природные изменения от незаконной деятельности человека.",
               },
               {
-                question: "Можно ли интегрировать VERDANT с существующими системами?",
+                question: "Как стать партнёром ЭКОСФЕРА?",
                 answer:
-                  "Да, VERDANT предоставляет полноценный API для интеграции с существующими системами управления природоохранной деятельностью, ГИС-платформами и системами оповещения. Наша документация содержит подробные руководства по внедрению.",
+                  "Мы открыты к партнёрству с природоохранными организациями, государственными структурами, исследовательскими институтами и компаниями ESG-направления. Напишите нам — вместе определим формат сотрудничества и зоны ответственности.",
               },
               {
-                question: "Какова модель ценообразования VERDANT?",
+                question: "Как ЭКОСФЕРА помогает бизнесу с ESG-отчётностью?",
                 answer:
-                  "Мы предлагаем многоуровневое ценообразование в зависимости от площади мониторинга и набора функций. Некоммерческие природоохранные организации могут претендовать на льготные тарифы или гранты. Свяжитесь с нами для расчета индивидуального предложения.",
+                  "Платформа предоставляет верифицированные данные о состоянии лесов и поглощении углерода — именно те метрики, которые нужны для ESG-отчётности по стандартам GRI, TCFD и CDP. Интегрируется с вашими системами через API.",
               },
               {
-                question: "Как я могу помочь в сохранении лесов через VERDANT?",
+                question: "Как я могу лично поддержать миссию?",
                 answer:
-                  "Есть несколько способов: пожертвование на мониторинг незащищенных территорий, волонтерство в командах наземной верификации или корпоративное партнерство. Каждый вклад помогает защищать критически важные экосистемы.",
+                  "Можно стать волонтёром в полевых командах верификации, сделать пожертвование на защиту конкретной территории или распространить информацию о проекте. Каждое действие имеет значение — природа благодарит.",
               },
             ].map((faq, i) => (
               <div
@@ -682,18 +682,18 @@ export default function VerdantPage() {
         <div className="max-w-[800px] w-full mx-auto text-center relative z-10">
           <div className="inline-flex items-center gap-2 glass-pill px-4 py-2 rounded-full mb-8 text-xs md:text-sm text-[#A7ABB3]">
             <span className="w-1.5 h-1.5 rounded-full bg-pink-400 animate-pulse" />
-            Спасем планету
+            Действуй сейчас
           </div>
 
           <h2 className="font-serif text-[40px] leading-[1.15] md:text-[64px] md:leading-[1.1] font-medium mb-6 text-balance">
-            Присоединяйтесь к глобальному движению
+            Станьте частью глобальной миссии
           </h2>
           <p className="text-[#A7ABB3] text-base md:text-lg mb-10 leading-relaxed max-w-[560px] mx-auto">
-            Вместе мы строим устойчивое будущее. Начните защищать леса уже сегодня.
+            Природа не ждёт. Каждый день без действий — это гектары утраченных лесов и исчезнувшие виды. Вместе мы можем изменить это.
           </p>
 
           <Button className="glass-button text-base rounded-full bg-white/5 border border-white/20 hover:bg-white/15 hover:border-white/30 transition-all duration-300 text-white px-8 py-6 md:text-base">
-            Начать сейчас
+            Присоединиться к ЭКОСФЕРА
           </Button>
         </div>
       </section>
@@ -703,9 +703,9 @@ export default function VerdantPage() {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-12 md:gap-8 mb-12">
             {/* Brand Column */}
             <div className="flex flex-col gap-4">
-              <div className="text-lg font-semibold font-mono">VERDANT</div>
+              <div className="text-lg font-semibold font-mono">ЭКОСФЕРА</div>
               <p className="text-xs text-[#A7ABB3] leading-relaxed">
-                Защита лесов по всему миру с помощью мониторинга в реальном времени и ИИ-технологий.
+                Глобальная платформа защиты природных экосистем — спутники, ИИ и люди в одной миссии.
               </p>
               <div className="flex items-center gap-4 mt-2">
                 <a
@@ -775,7 +775,7 @@ export default function VerdantPage() {
             {/* Newsletter Subscription */}
             <div className="flex flex-col gap-4">
               <div className="text-xs uppercase tracking-[0.15em] text-[#F2F3F5] font-semibold mb-2">Рассылка</div>
-              <p className="text-xs text-[#A7ABB3] mb-3">Получайте новости об экологических инициативах.</p>
+              <p className="text-xs text-[#A7ABB3] mb-3">Получайте отчёты о наших проектах и новости о защите природы.</p>
               <div className="flex flex-col gap-2">
                 <input
                   type="email"
@@ -791,7 +791,7 @@ export default function VerdantPage() {
 
           {/* Footer Bottom */}
           <div className="border-t border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-[#A7ABB3]">
-            <div>2025 VERDANT. Все права защищены.</div>
+            <div>2026 ЭКОСФЕРА. Все права защищены.</div>
             <div className="flex gap-6">
               <a href="#" className="hover:text-[#F2F3F5] transition-colors">
                 Политика конфиденциальности
